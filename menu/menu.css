@@ -1,0 +1,45 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#navbar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #00296d;
+    padding: 15px;
+    display: flex;
+    gap: 25px;
+}
+
+.navbutton {
+    color: rgb(247, 230, 0);
+    text-decoration: none;
+    border: 1px solid rgb(247, 230, 0);
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    margin-top: 25px;
+}
+
+.menucontainer {
+    width: 75%;
+    height: 10%;
+    background-color: #00296d;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
