@@ -17,7 +17,7 @@ class UserController extends Controller
 
     public function  login(Request $request)
     {
-        $users = User::where('name',$request->name)->exists();
+        $users = User::where(['name'=>$request->username,'password'=>$request->password])->exists();
         if ($users == 1){
             $admins = User::where(['admin_status'=>1,'name'=>$request->name])->exists();
                 if ($admins == 1){
