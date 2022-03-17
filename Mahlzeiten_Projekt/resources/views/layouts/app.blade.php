@@ -34,7 +34,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item"><a href="{{ route('mahlzeit') }}" class="text-bold">Menu</a></li>
+                        <li class="nav-item"><a href="{{ route('auswertung') }}" class="text-bold">Auswertung</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -42,11 +43,8 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a href="{{ route('mahlzeit') }}" class="text-bold">Menu</a>
-                                <a href="{{ route('auswertung') }}" class="text-bold">Auswertung</a>
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -73,7 +71,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" id="app">
             @yield('content')
         </main>
     </div>

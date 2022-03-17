@@ -21,7 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 */
 
 //Route f
-Route::get('/','UserController@index')->name('login');
+Route::get('/','UserController@index');
+
 Route::post('/login','UserController@login')->name('login');
 Route::post('/mahlzeit','MahlzeitController@anlegen')->name('mahlzeit');
 Route::get('/mahlzeit','MahlzeitController@aufrufen')->name('mahlzeit');
