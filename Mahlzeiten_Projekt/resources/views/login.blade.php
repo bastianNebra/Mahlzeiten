@@ -14,7 +14,7 @@
                         <h2>Log In</h2>
                     </div>
                     <div class="row">
-                        <form action="{{ route('login') }}" class="form-group" method="POST">
+                        <form action="{{ url('login') }}" class="form-group" method="POST">
                             @csrf
                             <div class="row">
                                 <input type="text" name="username" id="username" class="form__input" placeholder="Username">

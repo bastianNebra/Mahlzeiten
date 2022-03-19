@@ -29,4 +29,11 @@ Route::get('/mahlzeit','MahlzeitController@aufrufen')->name('mahlzeit');
 Route::get('/auswertung','MahlzeitController@auswertung')->name('auswertung');
 
 
+//New login panel
+Route::get('/register','Login@index');
+Route::post('/register_user','Login@user_save');
+Route::GET('/login','Login@login');
+
+
+
 
