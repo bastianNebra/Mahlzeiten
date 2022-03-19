@@ -20,16 +20,11 @@ class UserController extends Controller
 
     public function  login(Request $request)
     {
-        session_start();
-        $_SESSION['test'] = 42;
-
-
         $users = User::where(['name'=>$request->username,'password'=>$request->password])->exists();
         $_SESSION['users'] = $users;
 
         if ($users == 1){
             $admins = User::where(['admin_status'=>1,'name'=>$request->username])->exists();
-            $_SESSION['admins'] = $admins;
                 if ($admins == 1){
                     $mahlzeitens = Mahlzeit::all();
                     return view('admin')->with(['mahlzeitens' => $mahlzeitens]);
